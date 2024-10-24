@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  @apply bg-[#090909] text-[#fff];
+}
+li {
+  @apply border border-[#ffffff90] text-[#ffffff90] p-1;
+}
+input {
+  @apply border-none bg-[#fefefe] text-[#000] p-1 rounded outline-none;
+}
