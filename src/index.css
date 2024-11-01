@@ -8,8 +8,86 @@ body {
   @apply bg-[#090909] text-[#fff];
 }
 li {
-  @apply border border-[#ffffff90] text-[#ffffff90] p-1;
+  @apply border border-[#ffffff90] text-[#ffffff90] p-1 text-sm flex items-center max-[420px]:text-xs;
 }
 input {
-  @apply border-none bg-[#fefefe] text-[#000] p-1 rounded outline-none;
+  @apply border-none bg-[#fefefe] text-[#000] p-1 rounded outline-none max-[500px]:text-sm ;
+}
+textarea{
+  @apply max-[500px]:text-sm ;
+}
+
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #181818; /* Color del fondo de la scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888888; /* Color de la parte desplazable */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del thumb al pasar el ratón */
+}
+
+select, option {
+  color: #000000; /* Texto negro */
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+select {
+  background-color: #ffffff; /* Fondo blanco para el select */
+}
+
+option {
+  background-color: #ffffff; /* Fondo azul para los options */
+  color: #000; /* Texto blanco dentro de options */
+}
+
+option:hover {
+  background-color: #007bff; /* Fondo azul para el hover */
+  color: #ffffff; /* Texto blanco para el hover */
+}
+
+
+.container {
+  --uib-size: 30px;
+  --uib-color: white;
+  --uib-speed: .8s;
+  --uib-bg-opacity: 0.1;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+  will-change: transform;
+  overflow: visible;
+}
+
+.car {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 25, 75;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  transition: stroke 0.5s ease;
+}
+
+.track {
+  fill: none;
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+  transition: stroke 0.5s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
