@@ -24,7 +24,7 @@ function App() {
   });
   const [canUse, setCanUse] = useState(true);
   const [charged, setCharged] = useState(false);
-  
+
   const getData = async () => {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
@@ -190,7 +190,7 @@ function App() {
             {users.map((user) => (
               <ul key={user.id} className="w-full text-sm flex justify-between">
                 <li className="w-[8%] text-[#ffffffdd] overflow-auto">
-                  {user.id}
+                  {user.id - 2}
                 </li>
                 <li className="w-[17%] text-[#ffffffdd] overflow-auto">
                   {user.name}
