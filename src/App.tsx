@@ -190,7 +190,7 @@ function App() {
             {users.map((user) => (
               <ul key={user.id} className="w-full text-sm flex justify-between">
                 <li className="w-[8%] text-[#ffffffdd] overflow-auto">
-                  {user.id - 2}
+                  {user.id}
                 </li>
                 <li className="w-[17%] text-[#ffffffdd] overflow-auto">
                   {user.name}
